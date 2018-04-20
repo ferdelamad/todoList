@@ -63,6 +63,8 @@ var todoList = {
 
 };
 
+
+/* Old version of buttons
 //We want to access the Display Todos button
 var displayTodosButton = document.getElementById('displayTodosButton')
   //We want to run the displayTodos Method when someone clicks the display todos button
@@ -78,3 +80,39 @@ var toggleAllButton = document.getElementById('ToggleAllButton');
 toggleAllButton.addEventListener('click', function() {
   todoList.toggleAll();
 });
+*/
+
+//Refactored version of the buttons
+var handlers = {
+  displayTodos: function() {
+    todoList.displayTodos()
+  },
+  addTodo: function() {
+    var input = document.getElementById('addTodoTextInput');
+    //I can not make a var like this document.getElementById('addTodoTextInput').value
+    //because it will store ONLY the primitive value, and when try and change that value
+    //I will only change the value on the variable not the original value on the HTML
+    todoList.addTodo(input.value);
+    input.value = '';
+  },
+  changeTodo: function() {
+    var position = document.getElementById('changePositon');
+    var todoText = document.getElementById('changeTodoText');
+    todoList.changeTodo(position.valueAsNumber, todoText.value);
+    position.value = '';
+    todoText.value = '';
+  },
+  deleteTodo: function() {
+    var positionToDelete = document.getElementById('positionToDelete');
+    todoList.deleteTodo(positionToDelete.valueAsNumber);
+    positionToDelete.value = '';
+  },
+  toggleCompleted: function() {
+    var toggleCompletedPosition = document.getElementById('toggleCompletedPosition');
+    todoList.toggleCompleted(toggleCompletedPosition.valueAsNumber);
+    toggleCompletedPosition.value = '';
+  },
+  toggleAll: function() {
+    todoList.toggleAll();
+  }
+}
