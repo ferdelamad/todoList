@@ -3,3 +3,65 @@ body {
   font-weight: 100;
   text-align: : center;
 }
+
+h1 {
+  text-align: center;
+}
+
+div {
+  text-align: center;
+  margin: 5px;
+}
+
+.butt {
+  color: #fff;
+  background-color: #31A6FF;
+  font-family: "verdana";
+  font-weight: 100;
+  font-size: 12px;
+  text-align: center;
+  border: solid 2px #31A6FF;
+  border-radius: 50px;
+  padding: 1px 8px;
+  transition-duration: 200ms;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px;
+}
+
+.butt:hover {
+  background-color: #fff;
+  color: #31A6FF;
+}
+
+.deleteButton {
+  color: #31A6FF;
+  background-color: #fff;
+  font-family: "verdana";
+  font-weight: 100;
+  font-size: 10px;
+  text-align: center;
+  border: solid 2px #31A6FF;
+  border-radius: 50px;
+  padding: 1px 8px;
+  transition-duration: 200ms;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px;
+  margin-left: 20px;
+}
+
+.deleteButton:hover {
+  background-color: #31A6FF;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  font-family: verdana;
+  font-size: 14px;
+}
+
+li {
+  margin: 4px;
+}

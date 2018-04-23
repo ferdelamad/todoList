@@ -107,9 +107,9 @@ var view = {
       var todoLi = document.createElement('li');
 
       if (todo.completed === true) {
-        todoTextWithCompletion = '( X ) ' + todo.todoText;
+        todoTextWithCompletion = '[x] ' + todo.todoText;
       } else {
-        todoTextWithCompletion = '(   ) ' + todo.todoText;
+        todoTextWithCompletion = '[ ] ' + todo.todoText;
       }
 
       todoLi.id = i;
@@ -119,7 +119,8 @@ var view = {
     }, this);
   },
   createDeleteButton: function() {
-    var deleteButton = document.createElement('button');
+    var deleteButton = document.createElement('a');
+    deleteButton.href = '#';
     deleteButton.textContent = 'Delete';
     deleteButton.className = 'deleteButton';
     return deleteButton;
