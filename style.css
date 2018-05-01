@@ -1,7 +1,12 @@
 body {
-  font-family: "proxima nova", verdana, sans-serif;
+  font-family: "Lato", verdana, sans-serif;
   font-weight: 100;
   text-align: : center;
+  background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 
 h1 {
